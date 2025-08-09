@@ -8,6 +8,7 @@
 Inicial * (1 + (Taxa de Juros * Anos)). Exiba o valor final do investimento
 - [x] Além disso, declare um vetor de inteiros com 3 elementos e uma matriz 2x2 de inteiros. Inicialize-os com valores à sua escolha.
 - [x] Utilize um ponteiro para acessar e modificar o primeiro elemento do vetor.
-- [] Exiba os valores dos elementos do vetor e da matriz, bem como os endereços de memória de cada elemento.
+- [x] Exiba os valores dos elementos do vetor e da matriz, bem como os endereços de memória de cada elemento.
+
 
 
