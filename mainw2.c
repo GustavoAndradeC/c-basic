@@ -1,53 +1,38 @@
 #include <stdio.h>
 
+#define INTEREST_RATE 0.05
+
 int main() {
-    float nota, soma = 0, maiorNota = -1, menorNota = 11;
-    int totalAlunos = 0, aprovados = 0, reprovados = 0;
 
-    printf("Digite as notas dos alunos (digite -1 para encerrar):\n");
+    double initialValue, finallyValue;
+    int years;
 
-    while (1) {
-        printf("Nota do aluno %d: ", totalAlunos + 1);
-        scanf("%f", &nota);
+    int vetor[3] = {10, 20, 30};
+    int matriz[2][2] = {{1, 2}, {3, 4}};
 
-        if (nota == -1) {
-            break;
-        }
+    printf("Digite o valor inicial do investimento: ");
+    scanf("%lf", &initialValue); 
 
-        // Valida a nota
-        if (nota < 0 || nota > 10) {
-            printf("Nota inválida! Digite um valor entre 0 e 10.\n");
-            continue;
-        }
+    printf("Digite o numero de anos do investimento: ");
+    scanf("%d", &years);
 
-        soma += nota;
-        totalAlunos++;
+    finallyValue = initialValue * (1 + INTEREST_RATE * years);
 
-        if (nota > maiorNota) {
-            maiorNota = nota;
-        }
-        if (nota < menorNota) {
-            menorNota = nota;
-        }
+    printf("\nValor final do investimento apos %d anos: R$ %.2f\n", years, finallyValue); // Verificar
 
-        if (nota >= 6) {
-            aprovados++;
-        } else {
-            reprovados++;
-        }
+    int *pVetor = &vetor[0];
+    *pVetor = 50; 
+
+    printf("Valores e enderecos dos elementos do VETOR:\n");
+    for (int i = 0; i < 3; i++) {
+        printf("vetor[%d]: Valor = %d, Endereco = %p\n", i, vetor[i], &vetor[i]);
     }
 
-    if (totalAlunos > 0) {
-        float media = soma / totalAlunos;
-        printf("\n===== RESULTADOS =====\n");
-        printf("Quantidade de alunos: %d\n", totalAlunos);
-        printf("Média das notas: %.2f\n", media);
-        printf("Maior nota: %.2f\n", maiorNota);
-        printf("Menor nota: %.2f\n", menorNota);
-        printf("Aprovados: %d\n", aprovados);
-        printf("Reprovados: %d\n", reprovados);
-    } else {
-        printf("\nNenhuma nota válida foi inserida.\n");
+    printf("\nValores e enderecos dos elementos da MATRIZ:\n");
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 2; j++) {
+            printf("matriz[%d][%d]: Valor = %d, Endereco = %p\n", i, j, matriz[i][j], &matriz[i][j]);
+        };
     }
 
     return 0;
