@@ -1,4 +1,4 @@
-//ALGORITMOS E ESTRUTURA DE DADOS SEMANA 1
+//ALGORITMOS E ESTRUTURA DE DADOS SEMANA 3
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -94,3 +94,4 @@ int main() {
     liberar();
     return 0;
 }
+
